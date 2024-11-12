@@ -11,7 +11,7 @@ const links: { href: string; label: string }[] = [
 function Navbar() {
     return (
         <div className="navbar bg-base-100 flex items-center gap-4">
-            <Image src="/entrega_El-Poi-Logotipo-imprenta-blanco.png" alt="logo" width={60} height={60} />
+            <Image src="/entrega_El-Poi-Logotipo-imprenta-blanco.png" alt="logo" width={60} height={60} priority/>
             {
                 links.map((link) => (
                     <Link key={link.href} href={link.href} className="btn btn-ghost text-xl">{link.label}</Link>
