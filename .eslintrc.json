@@ -1,3 +1,15 @@
 {
-  "extends": "next/core-web-vitals"
+  "root": true,
+  "extends": [
+    "next",
+    "next/core-web-vitals", // Includes best practices for Next.js
+    "prettier" // Disables ESLint rules that conflict with Prettier
+  ],
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": "error", // Marks formatting issues as errors
+    "indent": ["error", 2], // Ensures 2 spaces for indentation
+    "react/jsx-indent": ["error", 2], // Ensures 2 spaces for JSX indentation
+    "react/jsx-indent-props": ["error", 2] // Ensures 2 spaces for props indentation
+  }
 }
