@@ -13,7 +13,7 @@ const ImageWrapper = ({ src, alt }: ImageWrapperProps) => {
 };
 export default function Page() {
   return (
-    <div className="grid grid-cols-4 gap-5 justify-items-center p-5">
+    <div className="grid md:grid-cols-4 gap-5 justify-items-center md:p-5 grid-cols-1 pd-1 mt-3">
       <ImageWrapper
         src="/images/entrada-tranquera-molino.jpeg"
         alt="Image Description"

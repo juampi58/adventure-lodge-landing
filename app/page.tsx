@@ -6,7 +6,7 @@ type ImageWrapperProps = {
 };
 const ImageWrapper = ({ src, alt }: ImageWrapperProps) => {
   return (
-    <figure className="w-[530px] h-[420px] relative overflow-hidden rounded-xl">
+    <figure className="w-[350px] h-[400px] md:w-[530px] md:h-[420px] relative overflow-hidden rounded-xl">
       <Image layout="fill" className="object-cover" src={src} alt={alt} />
     </figure>
   );
@@ -14,14 +14,14 @@ const ImageWrapper = ({ src, alt }: ImageWrapperProps) => {
 
 export default function Home() {
   return (
-    <section className="bg-gray-100">
+    <section>
       <div className="container mx-auto py-16 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
           <div className="max-w-lg">
-            <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+            <h2 className="text-3xl font-extrabold sm:text-4xl">
               Quiénes Somos - Poí Ranch
             </h2>
-            <p className="mt-4 text-gray-600 text-lg">
+            <p className="mt-4 text-lg">
               Poí Ranch es mucho más que un coto de caza; es un lugar donde se
               vive la esencia de la vida de campo en Argentina. Fundado por dos
               hermanos apasionados por la naturaleza y las tradiciones rurales,
@@ -44,16 +44,16 @@ export default function Home() {
             alt="Image Description"
           />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8 mt-12">
           <ImageWrapper
             src="/images/caballos-jinete-rifle.jpeg"
             alt="Image Description"
           />
           <div className="max-w-lg">
-            <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+            <h2 className="text-3xl font-extrabold sm:text-4xl">
               Una experiencia
             </h2>
-            <p className="mt-4 text-gray-600 text-lg">
+            <p className="mt-4 text-600 text-lg">
               Nuestro equipo está compuesto por expertos que conocen cada rincón
               del coto y están comprometidos en ofrecer una estancia
               inolvidable. Contamos con guías especializados y cocineros que
