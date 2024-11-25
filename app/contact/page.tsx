@@ -1,15 +1,15 @@
 'use client';
 
 import { useRef, useState } from 'react';
-import { MapIcon, EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/outline';
+import { EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/outline';
 import emailjs from 'emailjs-com';
-
+import InstagramLink from '../ui/InstagramLink';
 const contactLineStyles = 'flex items-center mt-2 space-x-2';
 
 const contactLineIconStyles = 'w-4 h-4';
 
 const inputStyles =
-  'w-full px-4 py-3 border-2 placeholder-[#C97A2B] rounded-md outline-none focus:border-[#C97A2B] focus:ring-2 focus:ring-[#C97A2B]';
+  'w-full px-4 py-3 border-2 placeholder-secondary rounded-md outline-none focus:border-accent focus:ring-2 focus:ring-accent transition-colors';
 
 export default function Page() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -41,35 +41,28 @@ export default function Page() {
     }
   };
   return (
-    <div id="contact-page">
-      <section
+    <main id="contact-page">
+      <header
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 text-center"
         id="contact-header"
       >
-        <h2 className="text-4xl font-bold ">Contacto</h2>
-        <p className="pt-6 pb-6 text-base max-w-2xl text-center m-auto ">
-          Estamos acá para ayudarte. Llená el formulario, envianos un e-mail o
-          llamanos.
-        </p>
-      </section>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16 grid md:grid-cols-2 lg:grid-cols-2 gap-y-8 md:gap-x-8 md:gap-y-8 lg:gap-x-8 lg:gap-y-16">
-        <section>
-          <h2 className="text-lg font-bold ">Medios de contacto</h2>
-          <div className={contactLineStyles}>
-            <MapIcon className={contactLineIconStyles} />
-            <a href="https://maps.app.goo.gl/3V4gv6om4U1R9LSU8">
-              Sauce, Corrientes, Argentina
-            </a>
-          </div>
-          <div className={contactLineStyles}>
+        <h2 className="text-2xl font-bold ">
+          Llená el formulario, envianos un e-mail o llamanos.
+        </h2>
+      </header>
+      <section className="mt-5 sm:mt-15 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16 grid md:grid-cols-2 lg:grid-cols-2 gap-y-8 md:gap-x-8 md:gap-y-8 lg:gap-x-8 lg:gap-y-16">
+        <article className="flex flex-col gap-2">
+          <h2 className="text-lg font-bold mb-5">Medios de contacto</h2>
+          <InstagramLink href="https://www.instagram.com/campoelpoi" />
+          <a href="mailto:hello@company.com" className={contactLineStyles}>
             <EnvelopeIcon className={contactLineIconStyles} />
-            <a href="mailto:hello@company.com">elpoi@gmail.com</a>
-          </div>
-          <div className={contactLineStyles}>
+            <span>elpoi@gmail.com</span>
+          </a>
+          <a href="tel:11111111111" className={contactLineStyles}>
             <PhoneIcon className={contactLineIconStyles} />
-            <a href="tel:11111111111">+54 9 11 3273 5924</a>
-          </div>
-        </section>
+            <span>+54 9 11 3273 5924</span>
+          </a>
+        </article>
         <form ref={form} onSubmit={sendEmail}>
           <div className="mb-5">
             <input
@@ -122,14 +115,12 @@ export default function Page() {
           <button
             type="submit"
             disabled={isSubmitting}
-            className={
-              'w-full py-4  px-7 bg-[#FFB84D] text-[#4D2800] font-semibold  transition-colors  rounded-md  focus:outline-none focus:ring-offset-2 focus:ring hover:bg-[#E69A3C]'
-            }
+            className="w-full py-4  px-7 bg-secondary text-accent font-semibold  transition-colors  rounded-md  focus:outline-none focus:ring-offset-2 focus:ring hover:bg-accent hover:text-secondary"
           >
             {isSubmitting ? 'Enviando...' : 'Enviar'}
           </button>
         </form>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 }

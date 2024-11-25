@@ -2,15 +2,15 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 const links: { href: string; label: string }[] = [
-  { href: '/', label: 'Home' },
-  { href: '/gallery', label: 'Galeria' },
-  { href: '/location', label: 'Ubicacion' },
-  { href: '/contact', label: 'Contacto' },
+  { href: '/', label: 'NOSOTROS' },
+  { href: '/gallery', label: 'GALERÍA' },
+  { href: '/location', label: 'UBICACIÓN' },
+  { href: '/contact', label: 'CONTACTO' },
 ];
 
 function Navbar() {
   return (
-    <div className="navbar bg-base-100 flex items-center gap-2 md:gap-10 bg-[#FFB84D] md:h-[90px] h-[350px] flex-col md:flex-row">
+    <main className="navbar bg-base-100 flex items-center gap-2 md:gap-5 lg:gap-10 bg-accent md:h-[90px] h-[350px] flex-col md:flex-row">
       <Image
         src="/logo.png"
         alt="logo"
@@ -36,7 +36,7 @@ function Navbar() {
         priority
         className="md:ml-auto md:mr-10 md:w-[125px]"
       />
-    </div>
+    </main>
   );
 }
 

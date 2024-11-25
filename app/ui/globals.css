@@ -3,26 +3,26 @@
 @tailwind utilities;
 
 body {
-  color: #4d2800;
-  background-color: #fff5e6;
+  color: #3f2908;
+  background-color: #ece8e1;
 }
 
 input,
 textarea {
-  color: #4d2800;
-  border-color: #e69a3c;
+  color: #3f2908;
+  border-color: #3b5456;
 }
 
 input:-webkit-autofill,
 textarea:-webkit-autofill,
 select:-webkit-autofill {
   box-shadow: 0 0 0px 1000px white inset !important;
-  -webkit-text-fill-color: #4d2800 !important;
+  -webkit-text-fill-color: #3f2908 !important;
 }
 
 a {
-  color: #4d2800;
+  color: #3f2908;
 }
 a:hover {
-  color: #e69a3c;
+  color: #3b5456;
 }
