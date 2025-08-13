@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import { Raleway } from 'next/font/google';
 import Navbar from './ui/navbar';
 
-const inter = Raleway({ subsets: ['latin'] });
+const raleway = Raleway({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Poi Ranch',
@@ -21,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={raleway.className}>
         <Navbar />
         {children}
       </body>
