@@ -7,7 +7,7 @@ type ImageWrapperProps = {
 const ImageWrapper = ({ src, alt }: ImageWrapperProps) => {
   return (
     <figure className="w-[350px] h-[350px] relative overflow-hidden rounded-xl">
-      <Image layout="fill" className="object-cover" src={src} alt={alt} />
+      <Image fill className="object-cover" src={src} alt={alt} />
     </figure>
   );
 };
